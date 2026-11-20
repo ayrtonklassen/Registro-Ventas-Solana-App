@@ -1,5 +1,7 @@
 # Registro de Ventas · App
 
+Cambio de prueba.
+
 ![Registro de Ventas · App — Solana, TypeScript y React](./images/banner-app.png)
 
 Frontend educativo desarrollado con **TypeScript y React** para interactuar con el programa [Registro de Ventas con PDAs](https://github.com/WayLearnLatam/Registro-Ventas-Solana-PDA) en **Solana Devnet**.

@@ -35,11 +35,13 @@ export async function crearRegistro(wallet: WalletFirma, connection: Connection,
 export async function crearCliente(wallet: WalletFirma, connection: Connection, nombreNegocio: string, nombre: string, opciones?: OpcionesEnvio): Promise<string> {
   nombreNegocio = negocioValido(nombreNegocio);
   nombre = nombreValido(nombre);
+
   const owner = firmante(wallet);
   const registro = pdaRegistro(nombreNegocio, owner.address);
   const id = await siguienteId(nombreNegocio, owner.address);
   const cliente = pdaCliente(registro, id);
-  const ix = getCrearClienteInstruction({ owner, registro, cliente, nombre });
+
+  const ix = getCrearClienteInstruction({owner, registro, cliente, nombre});
   return enviar(ix, wallet, connection, opciones);
 }
 
